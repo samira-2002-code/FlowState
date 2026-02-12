@@ -4,88 +4,12 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>FlowState</title>
-        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+          <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
     </head>
-    <body class="h-[140vh]">
-        <main>
-            <header>
-                <section class="justify-beetwen flex mt-4 ">
-                    <img class="w-10 ml-4" src="burger.png" alt="menu" />
-                    <h1 class="ml-4 mr-[36vh] text-xl font-bold">BE PRO</h1>
-                    <img
-                        class="w-10 h-10"
-                        src="notification.png"
-                        alt="notification"
-                    />
-                </section>
-                <p class="mt-4 font-bold text-xl ml-8 p-4">
-                    GOOD MORNING ,SAMIRA
-                </p>
-            </header>
-            <section class="bg-pink-100 p-2 flex justify-center items-center">
-                <div
-                    class="bg-white w-[50vh] h-[19vh] rounded-full mr-20 justify-center items-center"
-                >
-                    <p class="font-bold text-3xl mt-10 ml-9">50%</p>
-                </div>
-                <p class="text-xl font-bold">
-                    BOOST UP YOUR ENERGIE AND START AGAIN TO ACHIVE
-                </p>
-            </section>
-            <section
-                class="card todo-module w-[60vh] h-[15vh] mt-4 ml-2 rounded-full bg-pink-100 p-4"
-            >
-                <h2>Today Tasks</h2>
+    <body>
+        <div id="app"></div>
 
-                <div class="add-task">
-                    <input
-                        id="add"
-                        class="bg-white w-60 h-10 rounded-full mr-8"
-                        type="text"
-                        placeholder="New task..."
-                    />
-                    <button class="bg-white px-4 rounded-full">+</button>
-                </div>
-
-                <p class="empty-state hidden">
-                    No tasks yet. Add one to start.
-                </p>
-
-                <ul class="task-list"></ul>
-            </section>
-            <section class="bg-pink-100 w-[59vh] mt-2 ml-2 rounded-full flex justify-around items-center h-[10vh]">
-                <img class="w-15 h-15" src="healthy.png" alt="shopping">
-                <p class="text-xl">1 H   of Groceries shoping </p>
-
-            </section>
-            <section class="bg-pink-100 w-[59vh] mt-2 ml-2 rounded-full flex justify-around items-center h-[10vh]">
-                <img class="w-15 h-15" src="worker.png" alt="shopping">
-                <p class="text-xl">1 H   of Groceries shoping </p>
-
-            </section>
-            <section class="bg-pink-100 w-[59vh] mt-2 ml-2 rounded-full flex justify-around items-center h-[10vh]">
-                <img class="w-15 h-15" src="shopping.png" alt="shopping">
-                <p class="text-xl">1 H   of Groceries shoping </p>
-
-            </section><section class="bg-pink-100 w-[59vh] mt-2 ml-2 rounded-full flex justify-around items-center h-[10vh] ">
-                <img class="w-15 h-15" src="eat.png" alt="shopping">
-                <p class="text-xl">1 H   of Groceries shoping </p>
-
-            </section>
-          
-        </main>
-
-        <nav class="fixed bottom-0 left-0 right-0 bg-pink-100 h-20 flex justify-around items-center  mt-50">
-            <button class="w-10 h-10"><img src="home.png" alt="home" /></button>
-            <button class="w-10 h-10"><img src="calendar.png" alt="" /></button>
-            <button id="plus" class="w-10 h-10">
-                <img src="plus.png" alt="plus" />
-            </button>
-            <button class="w-10 h-10">
-                <img src="time-left.png" alt="crono" />
-            </button>
-            <button class="w-10 h-10"><img src="user.png" alt="user" /></button>
-        </nav>
-        <script src="todo.js"></script>
+        <script src="/js/app.js" type="module"></script>
     </body>
 </html>
