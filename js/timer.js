@@ -58,6 +58,13 @@ export const renderTimer =()=>{
     }, 1000);
   };
 
+  const stopTimer = () => {
+    if (intervalId) {
+      clearInterval(intervalId);
+      intervalId = null;
+    }
+  };
+
 }
 
 
@@ -65,4 +72,5 @@ export const renderTimer =()=>{
   
 
 
+ 
  
