@@ -22,7 +22,18 @@ export const renderTasks=()=>{
 
 
 
+export const renderTimer =()=>{
+    const app =document.getElementById("app");
+    const timeDisplay=document.getElementById("startBtn");
+    const startBtn=document.getElementById("stopBtn");
+    const backBtn=document.getElementById("backBtn");
+
+    const WORK_DURATION=25*60;
+    const BREAK_DURATION=5*60;
+
+}
 
 
+ 
 
 
