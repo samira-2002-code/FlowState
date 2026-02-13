@@ -7,12 +7,22 @@ export function initTodo(){
   }
 }
 
-
+function loadTasks(){
+const stored=localStorage.getItem(KEY);
+if (stored){
+  tasks=JSON.parse(stored);
+}
+}
 
 
 
 
  
+
+
+
+
+
 
 
 
