@@ -41,17 +41,47 @@ function toggleDone(id){
   saveTasks();
   renderTasks();
 }
+function renderTasks(){
+  const list = document.querySelector(".task-list");
+  list.innerHTML="";
+  const emptyState=document.querySelector(".empty-state");
+  if(tasks.length===0){
+    emptyState.classList.remove("hidden");
+    return;
+  }else{
+    emptyState.classList.add("hidden");
+  }
+  tasks.forEach((task)=>{
+    const section=document.createElement("section");
+    section.className= "bg-pink-100 w-[59vh] mt-2 ml-2 rounded-full flex justify-around items-center h-[10vh]";
+    const p =document.createElement("p");
+    p.className=`text-xl cursor-pointer ${task.done ? "line-through text-gray-400" : ""}`;
+    p.textContent=task.task;
+    p.addEventListener("click",()=>toggleDone(task.id));
+    
+    const delBtn=document.createElement("button");
+    delBtn.textContent="Delete";
+    delBtn.className= "bg-red-500 text-white px-2 py-1 rounded-full";
+    delBtn.addEventListener("click",()=> delData(task.id)); 
+   
+    section.appendChild(p);
+    section.appendChild(delBtn);
+    list.appendChild(section);
+
+  });
+}
 
 
 
 
- 
+
+    
+     
 
 
+   
 
 
-
-  
 
 
 
