@@ -35,7 +35,12 @@ function delData(id){
 }
 
 
-
+function toggleDone(id){
+  tasks=tasks.map((task)=>
+  task.id === id? { ...task,done:!task.done} : task);
+  saveTasks();
+  renderTasks();
+}
 
 
 
@@ -43,6 +48,10 @@ function delData(id){
  
 
 
+
+
+
+  
 
 
 
