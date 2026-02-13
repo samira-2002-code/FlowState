@@ -34,6 +34,12 @@ export function initTodo() {
     renderTasks();
   }
 
+  document.getElementById("add").addEventListener("keypress", (e) => {
+    if(e.key === "Enter"){
+      addData();
+    }
+  })
+
  
   function delData(id) {
     tasks = tasks.filter((task) => task.id !== id);

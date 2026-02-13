@@ -1,6 +1,6 @@
 export const renderDashboard = () => {
-  const app = document.getElementById("app");
-  app.innerHTML=` <main class="h-[140vh]">
+    const app = document.getElementById("app");
+    app.innerHTML = ` <main class="h-[140vh]">
 
       <header>
         <section class="flex justify-between mt-4">
@@ -23,25 +23,48 @@ export const renderDashboard = () => {
         </p>
       </section>
 
-      <section class="card todo-module w-[60vh] h-[20 vh] mt-4 ml-2 rounded-full bg-pink-100 p-4">
-        <h2>Today Tasks</h2>
+      <section
+  class="card todo-module 
+         w-full 
+         max-w-md 
+         md:max-w-lg 
+         lg:max-w-xl 
+         mx-auto 
+         mt-8 
+         rounded-3xl 
+         bg-pink-100 
+         p-6 
+         shadow-lg">
 
-        <div class="add-task flex mb-4">
-          <input
-            id="add"
-            class="bg-white w-60 h-10 rounded-full mr-8"
-            type="text"
-            placeholder="New task..."
-          />
-          <button id="plus" class="bg-white px-4 rounded-full">+</button>
-        </div>
+  <h2 class="text-xl font-semibold mb-4 text-gray-700">
+    Today Tasks
+  </h2>
 
-        <p class="empty-state hidden mt-4">
-          No tasks yet. Add one to start.
-        </p>
+  <div class="add-task flex items-center gap-3">
+    <input
+      id="add"
+      class="bg-white flex-1 h-10 rounded-full px-4 
+             focus:outline-none focus:ring-2 focus:ring-pink-300"
+      type="text"
+      placeholder="New task..."
+    />
+    <button
+      id="plus"
+      class="bg-white w-10 h-10 rounded-full 
+             flex items-center justify-center
+             text-lg font-bold 
+             hover:bg-pink-200 transition">
+      +
+    </button>
+  </div>
 
-        <ul class="task-list"></ul>
-      </section>
+  <p class="empty-state hidden mt-4 text-gray-500 text-sm">
+    No tasks yet. Add one to start.
+  </p>
+
+  <ul class="task-list mt-4 space-y-2"></ul>
+
+</section>
 
  
 
@@ -69,20 +92,4 @@ export const renderDashboard = () => {
       </button>
     </nav>
   `;
-  
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+};
