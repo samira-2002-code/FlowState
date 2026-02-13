@@ -30,10 +30,39 @@ export const renderTimer =()=>{
 
     const WORK_DURATION=25*60;
     const BREAK_DURATION=5*60;
+    let timer=WORK_DURATION;
+    let intervalId=null;
+    let isWork=true;
+    const formatTime=(seconds)=>{
+        const m = Math.floor(seconds/60).toString().padStart(2,"0");
+        const s = (seconds %60).toString().padStart(2,"0");
+        return `${m}:${s}`
+    };
+    timeDisplay.textContent=formatTime(timer);
+     const startTimer = () => {
+    if (intervalId) return;
+
+    intervalId = setInterval(() => {
+      timer--;
+      timeDisplay.textContent = formatTime(timer);
+
+      if (timer <= 0) {
+        clearInterval(intervalId);
+        intervalId = null;
+        isWork = !isWork; 
+        timer = isWork ? WORK_DURATION : BREAK_DURATION;
+        startBtn.textContent = isWork ? "Start Work" : "Start Break";
+        timeDisplay.textContent = formatTime(timer);
+        alert(isWork ? "Back to work!" : "Time for a break!");
+      }
+    }, 1000);
+  };
 
 }
 
 
+
+  
+
+
  
-
-
