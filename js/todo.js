@@ -13,11 +13,24 @@ if (stored){
   tasks=JSON.parse(stored);
 }
 }
+function addData(){
+  const input=document.getElementById("add");
+  if (input.value.trim()==="")return;
+  const newTask={
+    id:Date.now(),
+    task:input.value,
+    done:false,
+  };
+  tasks.push(newTask);
+  input.value="";
+
+  saveTasks();
+  renderTasks();
+}
 
 
 
 
- 
 
 
 
