@@ -28,10 +28,19 @@ function addData(){
   renderTasks();
 }
 
+function delData(id){
+  tasks=tasks.filter((task)=>task.id !==id);
+  saveTasks();
+  renderTasks();
+}
 
 
 
 
+
+
+
+ 
 
 
 
