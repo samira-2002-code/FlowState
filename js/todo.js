@@ -75,7 +75,7 @@ function renderTasks() {
   tasks.forEach((task) => {
     
     const section = document.createElement("section");
-    section.className = "bg-pink-100 w-[59vh] mt-2 ml-2 rounded-full flex justify-around items-center h-[10vh]";
+    section.className = "bg-pink-100  w-[45vh] md:w-[80vh] mt-2 ml-2 rounded-full flex justify-around items-center h-[10vh]";
 
   
 
@@ -88,7 +88,7 @@ function renderTasks() {
    
     const delBtn = document.createElement("button");
     delBtn.textContent = "Delete";
-    delBtn.className = "bg-red-500 text-white px-2 py-1 rounded-full"; 
+    delBtn.className = "bg-red-700 text-white px-2 py-1 rounded-full"; 
     delBtn.addEventListener("click", () => delData(task.id));
 
     

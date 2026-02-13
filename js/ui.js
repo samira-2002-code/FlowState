@@ -32,7 +32,7 @@ export const renderDashboard = () => {
          mx-auto 
          mt-8 
          rounded-3xl 
-         bg-pink-100 
+         bg-pink-300 
          p-6 
          shadow-lg">
 
