@@ -6,7 +6,7 @@ export const renderDashboard = () => {
         <section class="flex justify-between mt-4">
           <img class="w-10 ml-4" src="images/burger.png" alt="menu" />
           <h1 class="ml-4 mr-[36vh] text-xl font-bold">BE PRO</h1>
-          <img class="w-10 h-10" src="notification.png" alt="notification" />
+          <img class="w-10 h-10" src="images/notification.png" alt="notification" />
         </section>
 
         <p class="mt-4 font-bold text-xl ml-8 p-4">
